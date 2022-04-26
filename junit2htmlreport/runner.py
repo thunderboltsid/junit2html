@@ -24,6 +24,18 @@ PARSER.add_argument("--max-skipped", dest="skip", type=int, default=0,
                     metavar="SKIPPED",
                     help="Exit non-zero if SKIPPED or more test cases are skipped (has no effect with --merged)")
 
+PARSER.add_argument("--ignore-skipped", dest="ignore-skip", type=bool, default=False,
+                    metavar="IGNORE SKIPPED",
+                    help="Ignore test cases that are skipped")
+
+PARSER.add_argument("--ignore-passed", dest="ignore-pass", type=bool, default=False,
+                    metavar="IGNORE PASSED",
+                    help="Ignore test cases that are passed")
+
+PARSER.add_argument("--ignore-failed", dest="ignore-fail", type=bool, default=False,
+                    metavar="IGNORE FAILED",
+                    help="Ignore test cases that are failed")
+
 PARSER.add_argument("--merge", dest="merge_output", type=str,
                     metavar="NEWREPORT",
                     help="Merge multiple test results into one file")
